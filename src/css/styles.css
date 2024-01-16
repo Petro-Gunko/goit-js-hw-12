@@ -23,6 +23,9 @@
   -webkit-text-size-adjust: 100%;
 }
 .loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 48px;
   height: 48px;
   border: 5px solid #fff;
@@ -80,4 +83,12 @@ img {
   flex-direction: column;
   text-align: center;
 }
+.btn-load-more {
+  margin-left: 50%;
+}
+
+
+
+
+
 
