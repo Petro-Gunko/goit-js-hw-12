@@ -22,10 +22,13 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-.loader {
+.btn-and-loader {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+.loader {
   width: 48px;
   height: 48px;
   border: 5px solid #fff;
@@ -82,9 +85,6 @@ img {
   display: flex;
   flex-direction: column;
   text-align: center;
-}
-.btn-load-more {
-  margin-left: 50%;
 }
 
 

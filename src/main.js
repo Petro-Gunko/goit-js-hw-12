@@ -9,17 +9,17 @@ const galleryRef = document.querySelector('.gallery');
 const loaderRef = document.querySelector('.loader');
 const loadMoreButtonRef = document.querySelector('.btn-load-more');
 const oneImage = document.querySelector('.gallery img');
+
 loadMoreButtonRef.style.display = 'none';
 loaderRef.style.display = 'none';
+
 let currentPage = 1;
 let cardHeight = 0;
-
 
 const lightbox = new SimpleLightbox('.gallery a', {
     captionDelay: 250,
     captionsData: 'alt',
 });
-
 
 formRef.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -110,11 +110,7 @@ loadMoreButtonRef.addEventListener('click', async () => {
                 message: 'We are sorry, but you have reached the end of search results.',
             });
             loadMoreButtonRef.style.display = 'none';
-        }
-
-        if (page !== 1) {
-            scrollGallery();
-        };
+        }    
         window.scrollBy({
             top: cardHeight * 2,
             behavior: 'smooth'
@@ -139,15 +135,3 @@ async function getImages(query, page) {
         
     }
 }
-
-// const scrollGallery = async () => {
-//     const imgItem = document.querySelector('.gallery-item');
-//     const imgHeight = imgItem.getBoundingClientRect().height;
-//     window.scrollBy({
-//         top: imgHeight * 2,
-//         left: 100,
-//         behavior: "smooth",
-//     });
-// };
-
-
